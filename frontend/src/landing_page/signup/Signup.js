@@ -27,6 +27,7 @@ const Signup = () => {
       localStorage.setItem('token', res.data.token); // Store the token
       
       window.location.href = `http://localhost:3001`; // Redirect to Dashboard app
+
     } catch (err) {
       setError(err.response.data.message); // Handle error from API
     }

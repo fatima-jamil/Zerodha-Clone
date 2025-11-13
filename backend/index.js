@@ -249,7 +249,7 @@ app.post("/api/auth/logout", (req, res) => {
 
 
 
-// Your existing routes
+// existing routes
 
 
 
@@ -348,10 +348,14 @@ app.post("/newOrder", async (req, res) => {
         await existingHolding.save();
       } else {
         // Create a new holding for the stock
+        // Create a new holding for the stock
         let newHolding = new HoldingsModel({
           name: newOrder.name,
           qty: newOrder.qty,
           price: newOrder.price,
+          avg: newOrder.price, // Set the initial average cost
+          net: "0.00%",         // Add a default value
+          day: "0.00%",         // Add a default value
         });
         await newHolding.save();
       }

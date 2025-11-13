@@ -1,1 +1,5 @@
 # Zerodha
+Backend .env
+PORT=3002
+MONGO_URL
+JWT_SECRET
